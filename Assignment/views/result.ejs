@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Simple Calculator</h1>
+    <form action="/calculate" method="POST">
+        <label for="num1">Enter the first number:</label>
+        <input type="number" name="num1" id="num1" required>
+        <br>
+        <label for="num2">Enter the second number:</label>
+        <input type="number" name="num2" id="num2" required>
+        <br>
+        <button type="submit">Calculate</button>
+    </form>
+
+    <% if (difference > 0) { %>
+        <h2>Calculation Results:</h2>
+        <p>Sum: <%= sum %></p>
+        <p>Difference: <%= difference %></p>
+        <p>Product: <%= product %></p>
+        <p>Quotient: <%= quotient %></p>
+    <% } else if (difference < 0) { %>
+        <h2>Error:</h2>
+        <p>Enter number 2 greater than number 1.</p>
+    <% } %>
+    
+</body>
+</html>
